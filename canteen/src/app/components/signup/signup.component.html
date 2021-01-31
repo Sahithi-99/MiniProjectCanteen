@@ -1,0 +1,21 @@
+<div class="container">
+    <h2 class="text-center">Sign Up</h2>
+    <form #f="ngForm" (ngSubmit)="signup(f)">
+        <input ngModel name="name" #name="ngModel" type="text" class="form-control" placeholder="Your name" required>
+        <div class="alert alert-danger" *ngIf="name.invalid && name.touched">Name is required</div>
+        <br>
+        <input ngModel name="email" #email="ngModel" type="email" class="form-control" placeholder="Email" required email>
+        <div class="alert alert-danger" *ngIf="email.touched && email.errors?.required">Email is required</div>
+        <div class="alert alert-success" *ngIf="email.touched && email.errors?.email"><i class="fas fa-times-circle"></i>Your email is not in required format</div>
+        <br>
+        <input ngModel name="password" #password="ngModel" type="password" class="form-control" placeholder="Password" required minlength="6">
+        <div class="alert alert-danger" *ngIf="password.touched && password.errors?.required">Password Required</div>
+        <div class="alert alert-success" *ngIf="password.touched &&  password.errors?.minlength"><i class="fas fa-times-circle"></i>Password must be more than 6 characters</div>
+        <br>
+        <input ngModel name="passwordConfirm" #passwordConfirm="ngModel" type="password" class="form-control" placeholder="Confirm Password" required>
+        <div class="alert alert-danger" *ngIf="passwordConfirm.invalid && passwordConfirm.touched">Password Required</div>
+        <div class="alert alert-success" *ngIf="passwordConfirm.value !== password.value"><i class="fas fa-times-circle"></i>Passwords doesnot match</div>
+        <br>
+        <button class="btn btn-primary" [disabled]="f.invalid || password.value !== passwordConfirm.value">Create Account</button>
+    </form>
+</div>

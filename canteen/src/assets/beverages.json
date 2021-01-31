@@ -1,0 +1,67 @@
+[
+    {
+        "name":"Tea",
+        "image":"assets/images/tea.jpg",
+        "price":10
+    },
+    {
+        "name":"Ginger Tea",
+        "image":"assets/images/ginger.jpg",
+        "price":10
+    },
+    {
+        "name":"Cardomum Tea",
+        "image":"assets/images/cardomum.jpg",
+        "price":10
+    },
+    {
+        "name":"Horlicks",
+        "image":"assets/images/horlicks.jpg",
+        "price":10
+    },
+    {
+        "name":"Boost",
+        "image":"assets/images/boost.jpg",
+        "price":10
+    },
+    {
+        "name":"Coffee",
+        "image":"assets/images/coffee.jpg",
+        "price":10
+    },
+    {
+        "name":"Cold Coffee",
+        "image":"assets/images/cold.jpg",
+        "price":10
+    },
+    {
+        "name":"Cappucino",
+        "image":"assets/images/Cappucino.jpg",
+        "price":10
+    },
+    {
+        "name":"Oreo Milkshake",
+        "image":"assets/images/oreo.jpg",
+        "price":10
+    },
+    {
+        "name":"Chocolate Milkshake",
+        "image":"assets/images/chocolate.jpg",
+        "price":10
+    },
+    {
+        "name":"Banana Milkshake",
+        "image":"assets/images/banamilk.jpg",
+        "price":10
+    },
+    {
+        "name":"Strawberry Milkshake",
+        "image":"assets/images/strawmilk.jpg",
+        "price":10
+    },
+    {
+        "name":"Vanilla Milkshake",
+        "image":"assets/images/vanilla.jpg",
+        "price":10
+    }
+]

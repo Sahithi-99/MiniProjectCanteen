@@ -1,0 +1,77 @@
+[
+    {
+        "name":"Apple juice",
+        "image":"assets/images/apple.jpg",
+        "price":20
+    },
+    {
+        "name":"Orange juice",
+        "image":"assets/images/orange.jpg",
+        "price":20
+    },
+    {
+        "name":"Mosmabi juice",
+        "image":"assets/images/mosambi.jpg",
+        "price":20
+    },
+    {
+        "name":"Pineapple juice",
+        "image":"assets/images/pine.jpg",
+        "price":20
+    },
+    {
+        "name":"Watermelon juice",
+        "image":"assets/images/water.jpg",
+        "price":20
+    },
+    {
+        "name":"Muskmelon juice",
+        "image":"assets/images/musk.jpg",
+        "price":20
+    },
+    {
+        "name":"Sapota juice",
+        "image":"assets/images/sapota.jpg",
+        "price":20
+    },
+    {
+        "name":"Strawberry juice",
+        "image":"assets/images/strawberry.jpg",
+        "price":20
+    },
+    {
+        "name":"Grape juice",
+        "image":"assets/images/grape.jpg",
+        "price":20
+    },
+    {
+        "name":"Pomegranate juice",
+        "image":"assets/images/pome.jpg",
+        "price":20
+    },
+    {
+        "name":"Banana juice",
+        "image":"assets/images/banana.jpg",
+        "price":20
+    },
+    {
+        "name":"Guauva juice",
+        "image":"assets/images/guava.jpg",
+        "price":20
+    },
+    {
+        "name":"Lemon juice",
+        "image":"assets/images/lemon.jpg",
+        "price":20
+    },
+    {
+        "name":"Fruit salad",
+        "image":"assets/images/salad.jpg",
+        "price":20
+    },
+    {
+        "name":"Jeera Soda",
+        "image":"assets/images/jeera.jpg",
+        "price":20
+    }
+]

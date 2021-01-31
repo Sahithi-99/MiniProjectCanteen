@@ -1,0 +1,104 @@
+[
+    {
+        "name":"Veg Meals",
+        "image":"assets/images/meals.jpg",
+        "price":40
+    },
+    {
+        "name":"Veg Pulao",
+        "image":"assets/images/pulao.jpg",
+        "price":40
+    },
+    {
+        "name":"Veg Fried Rice",
+        "image":"assets/images/vfrice.jpg",
+        "price":40
+    },
+    {
+        "name":"Veg Noodles",
+        "image":"assets/images/vnoodles.jpg",
+        "price":40
+    },
+    {
+        "name":"Veg Manchurian",
+        "image":"assets/images/vmunch.jpg",
+        "price":40
+    },
+    {
+        "name":"Paneer Biryani",
+        "image":"assets/images/pbiryani.jpg",
+        "price":40
+    },
+    {
+        "name":"Tandoori Roti",
+        "image":"assets/images/troti.jpg",
+        "price":40
+    },
+    {
+        "name":"Paneer Paratha",
+        "image":"assets/images/pparata.jpg",
+        "price":40
+    },
+    {
+        "name":"Aloo Paratha",
+        "image":"assets/images/aparata.jpg",
+        "price":40
+    },
+    {
+        "name":"Corn Fried Rice",
+        "image":"assets/images/cofrice.jpg",
+        "price":40
+    },
+    {
+        "name":"Veg Soup",
+        "image":"assets/images/vsoup.jpg",
+        "price":40
+    },
+    {
+        "name":"Non-veg Meals",
+        "image":"assets/images/nvmeals.jpg",
+        "price":40
+    },
+    {
+        "name":"Chicken Biryani",
+        "image":"assets/images/cbiryani.jpg",
+        "price":40
+    },
+    {
+        "name":"Chicken Noodles",
+        "image":"assets/images/cnoodles.jpg",
+        "price":40
+    },
+    {
+        "name":"Chicken Fried Rice",
+        "image":"assets/images/cfrice.jpg",
+        "price":40
+    },
+    {
+        "name":"Chicken Manchurian",
+        "image":"assets/images/cmunch.jpg",
+        "price":40
+    },
+    {
+        "name":"Egg Biryani",
+        "image":"assets/images/ebiryani.jpg",
+        "price":40
+    },
+    {
+        "name":"Egg Fried Rice",
+        "image":"assets/images/erice.jpg",
+        "price":40
+    },
+    {
+        "name":"Egg Noodles",
+        "image":"assets/images/enoodles.jpg",
+        "price":40
+    },
+    {
+        "name":"Chicken Soup",
+        "image":"assets/images/csoup.jpg",
+        "price":40
+    }
+
+
+]

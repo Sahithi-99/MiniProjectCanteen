@@ -1,0 +1,125 @@
+[
+    {
+      
+        "name": "Idly",
+        "image": "assets/images/idly.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Plain Dosa",
+        "image": "assets/images/plaindosa.jpg",
+        "price": 35
+    },
+    {
+        
+       "name": "Butter Dosa",
+        "image": "assets/images/ButterDosa.jpg",
+        "price": 35
+    },
+    {
+        
+      "name": "Masala Dosa",
+        "image": "assets/images/MasalaDosa.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Onion Dosa",
+        "image": "assets/images/OnionDosa.jpg" ,
+        "price": 35
+    },
+    {
+        
+        "name": "Paneer Dosa",
+        "image": "assets/images/PaneerDosa.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Rava Dosa",
+        "image": "assets/images/RavaDosa.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Chapathi",
+        "image": "assets/images/chapathi.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Butter Chapathi",
+        "image": "assets/images/ButterChapathi.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Vada",
+        "image": "assets/images/vada.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Punugulu",
+        "image": "assets/images/Punugulu.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Mysore Bonda",
+         "image": "assets/images/mysoreBonda.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Pongadalu",
+        "image": "assets/images/Pongadalu.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Upma",
+         "image": "assets/images/upma.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Poha",
+        "image": "assets/images/Poha.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Rava Kichidi",
+        "image": "assets/images/RavaKichidi.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Pongal",
+        "image": "assets/images/Pongal.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Puri",
+        "image": "assets/images/puri.jpg",
+        "price": 35
+    },
+    {
+        
+        "name": "Pesarattu",
+        "image": "assets/images/pesarattu.jpg",
+        "price":35
+    },
+    {
+        
+        "name": "Uttapam",
+        "image": "assets/images/uttapam.jpg",
+        "price": 35
+    }
+    
+
+    
+]
