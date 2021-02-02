@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Item } from '../interfaces/item.interface';
+import { Order } from '../interfaces/order.interface';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -26,5 +27,9 @@ export class CartService {
     return this.fs.collection('users').doc(this.as.userId).collection('cart').doc(id).update({
       quantity
     })
+  }
+  placeOrder(data:Order)
+  {
+    return this.fs.collection('users').doc(this.as.userId).collection('orders').add(data)
   }
 }

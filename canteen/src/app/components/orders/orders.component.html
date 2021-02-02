@@ -1,1 +1,17 @@
-<p>orders works!</p>
+<div class="container">
+    <div class="card-deck">
+        <div *ngFor="let d of product;index as i" class="card mb-5" style="min-width:15rem;">
+            
+                <img class="card-img-top" src="{{d.image}}" alt="..." style="height:200px; width:200px">
+                <div class="card-body">
+                   <h4 class="card-title">{{d.name}} X {{d.quantity}}</h4> 
+                   <h5 class="card-text">BasePrice:{{d.price}}</h5>
+                   <h5 class="card-text">Amount:{{d.amount}}</h5>
+                   
+
+                    
+              </div>
+        </div>
+    </div>
+</div>
+

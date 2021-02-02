@@ -11,7 +11,7 @@ import { LunchComponent } from './components/lunch/lunch.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AuthGuard } from './services/guards/auth.guard';
-
+import {OrdersComponent} from './components/orders/orders.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:'lunch',component:LunchComponent},
   {path:'juices',component:JuicesComponent},
   {path:'cafe',component:CafeComponent},
+  {path:'orders',component:OrdersComponent},
   {path:'**',component:NotFoundComponent},
 ];
 

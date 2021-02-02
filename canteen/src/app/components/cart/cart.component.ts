@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Cart } from 'src/app/interfaces/cart.interface';
 import { Item } from 'src/app/interfaces/item.interface';
+import { Order } from 'src/app/interfaces/order.interface';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -49,5 +50,19 @@ export class CartComponent implements OnInit {
   save(id)
   {
     this.cs.update(this.product[id].id,this.product[id].quantity)
+  }
+  buy(index:number)
+  {
+    let selectedItem = this.product[index];
+    let data={
+      name:selectedItem.name,
+      price:selectedItem.price,
+      image:selectedItem.image,
+      quantity:selectedItem.quantity,
+      amount:(selectedItem.price*selectedItem.quantity),
+      date:new Date()
+  }
+    this.cs.placeOrder(data)
+
   }
 }

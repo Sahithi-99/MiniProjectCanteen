@@ -25,6 +25,9 @@
         <li class="nav-item" *ngIf="isUser && !isAdmin">
             <a class="nav-link" routerLink="/cart" routerLinkAvtive="active">Cart</a>
           </li>
+          <li class="nav-item" *ngIf="isUser && !isAdmin">
+            <a class="nav-link" routerLink="/orders" routerLinkAvtive="active">Your Orders</a>
+          </li>
          <li class="nav-item" *ngIf="isUser && isAdmin"> 
             <a class="nav-link" routerLink="/admin" routerLinkAvtive="active">Dashboard</a>
           </li>
