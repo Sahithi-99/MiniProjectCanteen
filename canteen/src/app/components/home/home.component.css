@@ -1,4 +1,14 @@
-.container
-{
-    background-image: url("src/assets/images/back.jpg");
+h1{
+    font-family: "Times New Roman", Times, serif;
+    text-decoration:darkslateblue;
+    text-shadow:yellow;
+    color:yellow;
+    font-style: italic;
+    font-size: 65px;
+}
+
+.carousel-inner img {
+
+    max-height: 500px;
+    max-width :auto;
 }

@@ -24,18 +24,20 @@ export class NavbarComponent implements OnInit {
           {
             if(data['admin']) this.isAdmin=true
             this.username=data['name']
+            
           }) 
-           
-         }
+          }
          else {
          this.isUser=false;
          this.as.userId=''
         }
+        
       })
   }
   logout()
   {
       this.as.logout().then(()=>console.log("out"))
+      this.isAdmin=false
       this.router.navigate(['/'])
   }
 

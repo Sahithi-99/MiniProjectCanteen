@@ -1,0 +1,22 @@
+th{
+    font-family: "Times New Roman", Times, serif;
+    text-decoration:darkslateblue;
+    text-shadow:red;
+    color:red;
+    font-style: italic;
+    font-size: 20px;
+}
+
+td{
+    font-family: "Times New Roman", Times, serif;
+    text-decoration:darkslateblue;
+    text-shadow:black;
+    color:black;
+    font-style: italic;
+    font-size: 20px;
+}
+
+table,th,td,thead{
+   border:2px solid blue;
+   background-color:white;
+}
