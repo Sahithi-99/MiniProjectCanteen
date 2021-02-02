@@ -15,9 +15,13 @@ import { BreakfastComponent } from './components/breakfast/breakfast.component';
 import { LunchComponent } from './components/lunch/lunch.component';
 import { JuicesComponent } from './components/juices/juices.component';
 import { CafeComponent } from './components/cafe/cafe.component';
-
+import { AngularFireModule } from '@angular/fire';
 import {FormsModule} from '@angular/forms';
 import { HttpClient,HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import {AngularFirestoreModule,SETTINGS} from '@angular/fire/firestore';
+import { AngularFireAuthModule} from '@angular/fire/auth';
+import {AngularFireStorageModule} from '@angular/fire/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,9 +43,15 @@ import { HttpClient,HttpClientModule } from '@angular/common/http';
     NgbModule,
     RouterModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    {provide:SETTINGS, useValue:{}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

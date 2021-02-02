@@ -1,1 +1,55 @@
-<p>goods works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th >Add a Breakfast Item</th>
+        <th >Add a Lunch Item</th>
+        <th >Add a Juice Item</th>
+        <th >Add a Cafe Item</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+            <form #f="ngForm" (ngSubmit)="addBreakfast(f)">
+                <input  type="text" class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
+                <input type="number" class="form-control" name="price" #price ngModel placeholder="Price"  required><br>
+                <input type="file" (change)="uploadB($event)" accept=".png,.jpg" />
+                <button (click)="uploadBImage()">Upload Image</button><br><br>
+                <input  type="submit" value="AddBreakfast" class="btn btn-success" >
+            </form>
+            
+        </td>
+        <td>
+            <form #f="ngForm" (ngSubmit)="addLunch(f)">
+                <input  type="text"  class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
+                <input  type="number" class="form-control" name="price" #price  ngModel placeholder="Price" required><br>
+                <input type="file" (change)="uploadL($event)" accept=".png,.jpg" />
+                <button (click)="uploadLImage()">Upload Image</button><br><br>
+                <button class="btn btn-success" >Add Lunch</button>
+            </form>
+            
+        </td>
+        <td>
+            <form #f="ngForm" (ngSubmit)="addJuice(f)">
+                <input type="text" class="form-control" name="name" #name ngModel placeholder="Name" required><br>
+                <input type="number" class="form-control"  name="price" #price ngModel placeholder="Price"  required><br>
+                <input type="file" (change)="uploadJ($event)" accept=".png,.jpg" />
+                <button (click)="uploadJImage()">Upload Image</button><br><br>
+                <input  type="submit" value="AddJuice" class="btn btn-success" >
+            </form>
+            
+        </td>
+        <td>
+            <form #f="ngForm" (ngSubmit)="addCafe(f)">
+                <input  type="text" class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
+                <input  type="number" class="form-control" name="price" #price ngModel placeholder="Price"  required><br>
+                <input type="file" (change)="uploadC($event)" accept=".png,.jpg" />
+                <button (click)="uploadCImage()">Upload  Image</button><br><br>
+                <input type="submit" value="AddCafe" class="btn btn-success" >
+            </form>
+            
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="alert alert-success text-center" *ngIf="add === 1"><i class="fa fa-check"></i> Item added !!</div>

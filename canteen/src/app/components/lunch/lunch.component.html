@@ -1,13 +1,13 @@
 
 <div class="container">
     <div class="card-deck">
-        <div *ngFor="let d of product; index as i" class="card mb-5" style="min-width:15rem;">
+        <div *ngFor="let d of product;index as i" class="card mb-5" style="min-width:15rem;">
             
                 <img  src="{{d.image}}" class="card-img-top" alt="..." style="height:200px; width:200px">
                 <div class="card-body">
                     <h4 class="card-text">{{d.name}}</h4>
                     <h5 class="card-text">{{d.price | currency:'INR'}}</h5>
-                    <button class="btn btn-primary" (click)="addToCart(i)">Add To Cart</button>
+                    <button class="btn btn-primary" (click)="addToCart(i)" *ngIf="add !== -1">Add To Cart</button>
                     
               </div>
         </div>

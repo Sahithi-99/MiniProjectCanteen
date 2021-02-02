@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">FoodItem</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of product;index as i"> 
+          <td>{{d.name}}</td> 
+          <td>{{d.price | currency:'INR'}}</td>
+          <td><img src="{{d.image}}" width="50px;" height="50px;"></td> 
+          <td>
+            <div class="form-check-inline">
+                <button class="btn btn-success" (click)="plus(d)"><i class="fa fa-plus"></i></button>
+                <input type="text" class="form-control" size='2' maxlength='1' [(ngModel)]="d.quantity" >
+                <button class="btn btn-success" (click)="minus(d)"><i class="fa fa-minus"></i></button>
+            </div>
+          </td>
+          <td>
+            {{d.price * d.quantity | currency:'INR'}}
+          </td>
+          <td>
+            <button class="btn btn-success" (click)="save(i)">Save</button>
+            <button class="btn btn-primary" (click)="delete(i)">Delete</button>
+          </td>      
+      </tr>
+    </tbody>
+  </table>
