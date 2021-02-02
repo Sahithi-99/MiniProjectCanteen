@@ -10,6 +10,7 @@ import { LoginComponent } from './components/login/login.component';
 import { LunchComponent } from './components/lunch/lunch.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthGuard } from './services/guards/auth.guard';
 
 
 const routes: Routes = [

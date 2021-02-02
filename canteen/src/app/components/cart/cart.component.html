@@ -1,3 +1,5 @@
+
+
 <table class="table table-striped">
     <thead>
       <tr>
@@ -20,13 +22,16 @@
                 <button class="btn btn-success" (click)="minus(d)"><i class="fa fa-minus"></i></button>
             </div>
           </td>
-          <td>
+          <td id="amount">
             {{d.price * d.quantity | currency:'INR'}}
           </td>
           <td>
             <button class="btn btn-success" (click)="save(i)">Save</button>
-            <button class="btn btn-primary" (click)="delete(i)">Delete</button>
-          </td>      
+            <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+          </td>  
+          <td>
+            <a><button class="btn btn-primary">Buy</button></a>
+          </td>    
       </tr>
     </tbody>
   </table>

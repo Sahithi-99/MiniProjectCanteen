@@ -28,51 +28,60 @@ export class DataService {
   {
     return this.fs.collection('beverages').snapshotChanges();
   }
-  addBreakfast(data:Item)
+  addBreakfast(name: string, price: Number, photo: File)
   {
-
-    return this.fs.collection('breakfast').add(data)
-  }
-  addCafe(name:string,price:Number,image:File)
-  {
-    let ref=this.storage.ref('beverages/' + image.name)
-    ref.put(image).then(()=>{
-      ref.getDownloadURL().subscribe(image =>
-        {
-          this.fs.collection('beverages').add({
+    let ref=this.storage.ref('breakfast/' + photo.name)
+    ref.put(photo).then(()=>{
+      ref.getDownloadURL().subscribe(image =>{
+       this.fs.collection('breakfast').add(
+          {
             name,
             price,
             image
           })
-        })
+      })
     })
   }
-  addLunch(name:string, price: Number,image:File)
+  addCafe(name:string,price:Number,photo:File)
   {
-    let ref=this.storage.ref('lunch/' + image.name)
-    ref.put(image).then(()=>{
-      ref.getDownloadURL().subscribe(image =>
-        {
-          this.fs.collection('lunch').add({
+    let ref=this.storage.ref('beverages/' + photo.name)
+    ref.put(photo).then(()=>{
+      ref.getDownloadURL().subscribe(image =>{
+        this.fs.collection('beverages').add(
+          {
             name,
             price,
             image
           })
-        })
+      })
     })
   }
-  addJuice(name:string,price:Number,image:File)
+  addLunch(name:string, price: Number,photo:File)
   {
-    let ref=this.storage.ref('juices/' + image.name)
-    ref.put(image).then(()=>{
-      ref.getDownloadURL().subscribe(image =>
-        {
-          this.fs.collection('juices').add({
+    let ref=this.storage.ref('lunch/' + photo.name)
+    ref.put(photo).then(()=>{
+      ref.getDownloadURL().subscribe(image =>{
+        this.fs.collection('lunch').add(
+          {
             name,
             price,
             image
           })
-        })
+      })
+    })
+  }
+  addJuice(name:string,price:Number,photo:File)
+  {
+    let ref=this.storage.ref('juices/' + photo.name)
+    ref.put(photo).then(()=>{
+      ref.getDownloadURL().subscribe(image =>{
+        this.fs.collection('juices').add(
+          {
+            name,
+            price,
+            image
+          })
+      })
     })
   }
 }

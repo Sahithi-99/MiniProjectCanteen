@@ -1,11 +1,8 @@
-import { ConditionalExpr } from '@angular/compiler';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { Form, NgForm } from '@angular/forms';
 import { Item } from 'src/app/interfaces/item.interface';
 import { DataService } from 'src/app/services/data.service';
-import { threadId } from 'worker_threads';
 
 @Component({
   selector: 'app-goods',
@@ -15,71 +12,48 @@ import { threadId } from 'worker_threads';
 export class GoodsComponent implements OnInit {
   add:number = 0;
   
-  filepath:string=''
-  imagePath:string=''
-  imageURL:string=''
-  pathtoadd:string=''
+  
+  @ViewChild("image") el:ElementRef;
   constructor(private dt:DataService,private st:AngularFireStorage) { }
 
   ngOnInit(): void {
   }
-  uploadB($event)
-  {
-     this.filepath=$event.target.files[0];
-     console.log(this.filepath);
-  }
-  uploadBImage()
-  {
-      this.pathtoadd="/breakfast"+Math.random()+this.filepath
-      this.st.upload(this.pathtoadd,this.filepath)
-      console.log("abcd")
-      const fileref=this.st.ref(this.filepath)
-      fileref.getDownloadURL().subscribe((url)=>{
-        this.imageURL=url
-      })
-      console.log(this.imageURL)
-  }
-  uploadC($event)
-  {
-
-  }
-  uploadCImage()
-  {
-
-  }
-  uploadJ($event)
-  {
-
-  }
-  uploadJImage()
-  {
-
-  }
-  uploadL($event)
-  {
-
-  }
-  uploadLImage()
-  {
-
-  }
-
-  addBreakfast(form)
+  
+  addBreakfast(form:NgForm)
   {  
-    let data:Item=form.value
-    data.image=this.imageURL;
-    this.dt.addBreakfast(data)
+    let name = (<Item>form.value).name,
+        price = (<Item>form.value).price,
+        photo =(<HTMLInputElement>this.el.nativeElement).files[0];
+    this.dt.addBreakfast(name,price,photo)
+      this.add=1;
+  
+    this.add=0;
   }
   addLunch(form:NgForm)
   {
-       
+    let name = (<Item>form.value).name,
+    price = (<Item>form.value).price,
+    photo =(<HTMLInputElement>this.el.nativeElement).files[0];
+this.dt.addLunch(name,price,photo) 
+this.add=1;
+this.add=0;
   }
   addCafe(form:NgForm)
   {
-      
+    let name = (<Item>form.value).name,
+    price = (<Item>form.value).price,
+    photo =(<HTMLInputElement>this.el.nativeElement).files[0];
+this.dt.addCafe(name,price,photo)
+this.add=1;
+this.add=0
   }
   addJuice(form:NgForm)
   {
-    
+    let name = (<Item>form.value).name,
+        price = (<Item>form.value).price,
+        photo =(<HTMLInputElement>this.el.nativeElement).files[0];
+    this.dt.addJuice(name,price,photo)
+    this.add=1;
+    this.add=0;
   }
 }

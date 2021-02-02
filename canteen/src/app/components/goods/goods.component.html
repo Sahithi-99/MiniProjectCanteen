@@ -1,53 +1,28 @@
+<h2 class="text-center">Add a Food item</h2>
 <table class="table">
-    <thead>
-      <tr>
-        <th >Add a Breakfast Item</th>
-        <th >Add a Lunch Item</th>
-        <th >Add a Juice Item</th>
-        <th >Add a Cafe Item</th>
-      </tr>
-    </thead>
     <tbody>
       <tr>
         <td>
-            <form #f="ngForm" (ngSubmit)="addBreakfast(f)">
-                <input  type="text" class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
-                <input type="number" class="form-control" name="price" #price ngModel placeholder="Price"  required><br>
-                <input type="file" (change)="uploadB($event)" accept=".png,.jpg" />
-                <button (click)="uploadBImage()">Upload Image</button><br><br>
-                <input  type="submit" value="AddBreakfast" class="btn btn-success" >
-            </form>
+        </td>
+        <td>
+          <form #e="ngForm">
+            <input type="text" class="form-control" name="name" ngModel placeholder="Name" required #name><br>
+            <input type="number" class="form-control" name="price" ngModel placeholder="Price" required #price><br>
+            <input type="file" ngModel name="photo" required #image><br><br>
+            <h4>To add Cafe Item: type-'cafe'</h4>
+            <h4>To add Breakfast Item: type-'breakfast'</h4>
+            <h4>To add Lunch Item: type-'lunch'</h4>
+            <h4>To add Juice Item: type-'juice'</h4><br>
+            <input type="text" class="form-control" name="category" ngModel placeholder="Type the category to add the item" required #category><br><br>
+            <input *ngIf="category.value === 'juice'" type="submit" value="AddJuice" class="btn btn-success" [disabled]="e.invalid" (click)="addJuice(e)">
+            <input *ngIf="category.value === 'breakfast'" type="submit" value="AddBreakfast" class="btn btn-success" [disabled]="e.invalid" (click)="addBreakfast(e)">
+            <input *ngIf="category.value === 'cafe'" type="submit" value="AddCafe" class="btn btn-success" [disabled]="e.invalid" (click)="addCafe(e)">
+            <input *ngIf="category.value === 'lunch'" type="submit" value="AddLunch" class="btn btn-success" [disabled]="e.invalid" (click)="addLunch(e)">
+
+          </form>
             
         </td>
         <td>
-            <form #f="ngForm" (ngSubmit)="addLunch(f)">
-                <input  type="text"  class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
-                <input  type="number" class="form-control" name="price" #price  ngModel placeholder="Price" required><br>
-                <input type="file" (change)="uploadL($event)" accept=".png,.jpg" />
-                <button (click)="uploadLImage()">Upload Image</button><br><br>
-                <button class="btn btn-success" >Add Lunch</button>
-            </form>
-            
-        </td>
-        <td>
-            <form #f="ngForm" (ngSubmit)="addJuice(f)">
-                <input type="text" class="form-control" name="name" #name ngModel placeholder="Name" required><br>
-                <input type="number" class="form-control"  name="price" #price ngModel placeholder="Price"  required><br>
-                <input type="file" (change)="uploadJ($event)" accept=".png,.jpg" />
-                <button (click)="uploadJImage()">Upload Image</button><br><br>
-                <input  type="submit" value="AddJuice" class="btn btn-success" >
-            </form>
-            
-        </td>
-        <td>
-            <form #f="ngForm" (ngSubmit)="addCafe(f)">
-                <input  type="text" class="form-control" name="name" #name ngModel placeholder="Name"  required><br>
-                <input  type="number" class="form-control" name="price" #price ngModel placeholder="Price"  required><br>
-                <input type="file" (change)="uploadC($event)" accept=".png,.jpg" />
-                <button (click)="uploadCImage()">Upload  Image</button><br><br>
-                <input type="submit" value="AddCafe" class="btn btn-success" >
-            </form>
-            
         </td>
       </tr>
     </tbody>
